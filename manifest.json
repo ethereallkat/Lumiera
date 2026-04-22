@@ -6,10 +6,13 @@
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "background_color": "#090607",
   "theme_color": "#E8B4B8",
   "orientation": "portrait",
   "lang": "id",
+  "dir": "ltr",
+  "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "categories": [
     "beauty",
     "lifestyle",
@@ -53,6 +56,42 @@
       "url": "url"
     }
   },
+  "widgets": [
+    {
+      "name": "Lumiera SkinGlow Widget",
+      "description": "Pantau kondisi kulit harian langsung dari home screen",
+      "tag": "lumiera-skinglow",
+      "ms_ac_template": "widgets/skinglow-template.json",
+      "data": "widgets/skinglow-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "icons/widget-screenshot.png",
+          "sizes": "600x400",
+          "label": "SkinGlow Widget Preview"
+        }
+      ],
+      "icons": [
+        {
+          "src": "icons/icon-192x192-A.png",
+          "sizes": "192x192"
+        }
+      ],
+      "auth": false,
+      "update": 86400
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "note_taking": {
+    "new_note_url": "./index.html#screen-tracker"
+  },
+  "scope_extensions": [
+    {
+      "origin": "https://ethereallkat.github.io"
+    }
+  ],
   "icons": [
     {
       "src": "icons/icon-192x192-A.png",
