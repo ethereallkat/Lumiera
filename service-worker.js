@@ -69,3 +69,47 @@ self.addEventListener("fetch", event => {
     })
   );
 });
+// Background Sync
+self.addEventListener('sync', event => {
+  if (event.tag === 'lumiera-sync') {
+    event.waitUntil(
+      fetch('./index.html')
+        .then(response => console.log('Background sync berhasil:', response))
+        .catch(err => console.error('Background sync gagal:', err))
+    );
+  }
+});
+
+// Periodic Background Sync
+self.addEventListener('periodicsync', event => {
+  if (event.tag === 'lumiera-periodic-sync') {
+    event.waitUntil(
+      fetch('./index.html')
+        .then(response => console.log('Periodic sync berhasil:', response))
+        .catch(err => console.error('Periodic sync gagal:', err))
+    );
+  }
+});
+
+// Push Notifications
+self.addEventListener('push', event => {
+  const data = event.data ? event.data.json() : {};
+  const title = data.title || 'Lumiéra';
+  const options = {
+    body: data.body || 'Ada update baru untuk rutinitas kecantikanmu ✦',
+    icon: './icons/icon-192x192-A.png',
+    badge: './icons/icon-192x192-A.png',
+    data: { url: data.url || './index.html' }
+  };
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
+});
+
+// Notifikasi diklik
+self.addEventListener('notificationclick', event => {
+  event.notification.close();
+  event.waitUntil(
+    clients.openWindow(event.notification.data.url)
+  );
+});
