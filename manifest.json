@@ -120,28 +120,5 @@
     "form_factor": "wide",
     "label": "Lumiéra — Desktop View"
   }
-],
- "shortcuts": [
-  {
-    "name": "Face Scan",
-    "short_name": "Scan",
-    "url": "./index.html#screen-scan",
-    "description": "Analisis kondisi kulit wajah Anda",
-    "icons": [{ "src": "icons/shortcut-scan.png", "sizes": "96x96", "type": "image/png" }]
-  },
-  {
-    "name": "Virtual Makeup",
-    "short_name": "Makeup",
-    "url": "./index.html#screen-makeup",
-    "description": "Coba berbagai tampilan makeup secara virtual",
-    "icons": [{ "src": "icons/shortcut-makeup.png", "sizes": "96x96", "type": "image/png" }]
-  },
-  {
-    "name": "Skin Tracker",
-    "short_name": "Tracker",
-    "url": "./index.html#screen-tracker",
-    "description": "Pantau progres kesehatan kulit harian",
-    "icons": [{ "src": "icons/shortcut-tracker.png", "sizes": "96x96", "type": "image/png" }]
-  }
 ]
 }
