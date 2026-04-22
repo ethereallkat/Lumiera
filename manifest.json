@@ -10,6 +10,21 @@
   "theme_color": "#E8B4B8",
   "orientation": "portrait",
   "lang": "id",
+  "shortcuts": [
+    {
+      "name": "Face Scan",
+      "short_name": "Scan",
+      "url": "./index.html#screen-scan",
+      "description": "Analisis kondisi kulit wajah Anda",
+      "icons": [
+        { 
+          "src": "icons/icon-192x192-A.png", 
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
   "icons": [
     {
       "src": "icons/icon-192x192-A.png",
